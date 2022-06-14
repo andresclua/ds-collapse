@@ -1,6 +1,6 @@
 {
   "name": "@andresclua/collapse",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "DOM",
   "main": "",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andresclua/es6-js-utilities.git"
+    "url": "git+https://github.com/andresclua/ds-collapse.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andresclua/es6-js-utilities/issues"
+    "url": "https://github.com/andresclua/ds-collapse/issues"
   },
-  "homepage": "https://github.com/andresclua/es6-js-utilities#readme",
+  "homepage": "https://github.com/andresclua/ds-collapse#readme",
   "devDependencies": {
     "babel-loader": "^8.2.2",
     "webpack": "^5.37.1",
