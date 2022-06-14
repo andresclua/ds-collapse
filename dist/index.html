@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>JS Utilities by - Andrés Clúa</title>
+</head>
+<body>
+    <section class="mt-2 mb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5>Collapse</h5>
+                    <style>
+                        .b--btn-a{
+                            background:rgb(246, 181, 170);
+                            color:white;
+                            display: inline-block;
+                            text-decoration: none;
+                            padding:16px;
+                            transition: all .6s cubic-bezier(0, 1, 0, 1); 
+                        }
+                        .b--btn-a--is-active{
+                            background:red;
+                        }
+                        .b--collapse-a {
+                            height: 0px;
+                            overflow: hidden;
+                            background:grey;
+                            transition: all .6s cubic-bezier(0, 1, 0, 1); 
+            
+                        }   
+                        .b--collapse-a--is-active{
+                            transition: all .6s cubic-bezier(0, 1, 0, 1);
+                        }
+
+
+                    </style>
+                    <a href="#" class="b--btn-a" 
+                        data-ds-element="collapse" 
+                        data-collapse-id="collapse-x" 
+                        data-target-class="b--collapse-a--is-active" 
+                        data-self-class="b--btn-a--is-active">Trigger Element</a>
+                    <div class="b--collapse-a" id="collapse-x">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero obcaecati incidunt quod labore illum sint odit! Saepe eligendi laboriosam earum a molestias, totam praesentium vero! Provident ad iure facilis veniam.</p>
+                    </div>
+
+
+                    <hr>
+                    
+                   
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br>
+
+    <script src="./main.js"></script>
+</body>
+</html>
