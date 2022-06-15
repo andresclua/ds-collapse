@@ -1,7 +1,7 @@
 {
   "name": "@andresclua/collapse",
-  "version": "0.0.2",
-  "description": "DOM",
+  "version": "0.0.5",
+  "description": "Collapse Component",
   "main": "",
   "scripts": {
     "webpack": "webpack --watch"
@@ -26,6 +26,8 @@
     "@babel/core": "^7.14.3"
   },
   "keywords": [
-    "Collapse"
+    "Collapse",
+    "Expand",
+    "Toggle Collapse"
   ]
 }
