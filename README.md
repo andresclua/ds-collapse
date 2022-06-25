@@ -49,8 +49,8 @@ new Collapse()
 1 - Create a file Collapse.js inside plugins folder & add this.
 ```sh
 import Collapse from '@andresclua/collapse/src/Collapse';
-export default ({ app }) => {
-    new Collapse()
+export default ({ app },inject) => {
+    inject('Collapse', () => new Collapse() );
 };
 ```
 2 - Reference in your nuxt.config.js
