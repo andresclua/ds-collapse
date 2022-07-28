@@ -33,7 +33,7 @@ npm install @andresclua/collapse
 ```
 3 -  the package
 ```sh
-import Collapse from '@andresclua/collapse/src/Collapse';
+import Collapse from '@andresclua/collapse';
 new Collapse()  
 ```
 4 - Your Html should look like this
@@ -48,7 +48,7 @@ new Collapse()
 ### For Nuxt
 1 - Create a file Collapse.js inside plugins folder & add this.
 ```sh
-import Collapse from '@andresclua/collapse/src/Collapse';
+import Collapse from '@andresclua/collapse';
 export default ({ app },inject) => {
     inject('Collapse', () => new Collapse() );
 };

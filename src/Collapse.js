@@ -1,4 +1,4 @@
-import JSUTIL from '@andresclua/jsutil/src/js_helper';
+import JSUTIL from '@andresclua/jsutil/';
 class Collapse{
     constructor(){
         this.selector = document.querySelectorAll('[data-ds-element="collapse"]');
