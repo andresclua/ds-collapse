@@ -1,8 +1,10 @@
 import JSUTIL from '@andresclua/jsutil/';
 class Collapse{
     constructor(){
+        this.jsutil = new JSUTIL();
         this.selector = document.querySelectorAll('[data-ds-element="collapse"]');
         this.events();
+     
     }
     events(){
         //loop all elements with data-ds-element="collapse"]
@@ -30,6 +32,21 @@ class Collapse{
                 this.collapseEvent(collapseArg)
             })
         })
+        window.addEventListener('resize', (event)=> {
+           //loop all elements with data-ds-element="collapse"]
+            this.selector.forEach(element =>{
+                
+                // need to check if element is open or not
+                let el = document.querySelectorAll('.'+ element.getAttribute('data-target-class'));
+                el.forEach(e =>{
+                    console.log('sc',e.scrollHeight)
+                    this.jsutil.addStyle(e,'height',`${e.scrollHeight}px`);
+                    console.log('oh',e.offsetHeight)
+                })
+
+    
+            })
+        }, true);
     }
     /*
      * targetID
@@ -37,17 +54,18 @@ class Collapse{
      * objectTrigger
      */
     collapseEvent(payload){
-        const jsutil = new JSUTIL();
+        
         if(!document.getElementById(payload.targetID).classList.contains(payload.targetClass)){
             const getHeight = document.getElementById(payload.targetID).scrollHeight;
-            jsutil.addStyle(document.getElementById(payload.targetID),'height',`${getHeight}px`);
+            console.log(getHeight)
+            this.jsutil.addStyle(document.getElementById(payload.targetID),'height',`${getHeight}px`);
         }else{
-            jsutil.addStyle(document.getElementById(payload.targetID),'height','0px');
+            this.jsutil.addStyle(document.getElementById(payload.targetID),'height','0px');
         }
         // apply class to b--collapse
-        jsutil.toggleClass(document.getElementById(payload.targetID),payload.targetClass)
+        this.jsutil.toggleClass(document.getElementById(payload.targetID),payload.targetClass)
         // apply class to trigger element    
-        jsutil.toggleClass(payload.objectId,payload.objectClass)
+        this.jsutil.toggleClass(payload.objectId,payload.objectClass)
     }
 
 }
