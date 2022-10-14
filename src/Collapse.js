@@ -42,7 +42,6 @@ class Collapse{
         
         if(!document.getElementById(payload.targetID).classList.contains(payload.targetClass)){
             const getHeight = document.getElementById(payload.targetID).scrollHeight;
-            console.log(getHeight)
             this.jsutil.addStyle(document.getElementById(payload.targetID),'height',`auto`);
         }else{
             this.jsutil.addStyle(document.getElementById(payload.targetID),'height','0px');
