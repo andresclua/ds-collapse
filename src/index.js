@@ -5,7 +5,7 @@ class Page{
         this.init()
     }
     init(){ 
-        new Collapse()  
+        new Collapse()   
     }
 }
 export default Page;

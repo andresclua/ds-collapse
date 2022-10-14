@@ -32,21 +32,6 @@ class Collapse{
                 this.collapseEvent(collapseArg)
             })
         })
-        window.addEventListener('resize', (event)=> {
-           //loop all elements with data-ds-element="collapse"]
-            this.selector.forEach(element =>{
-                
-                // need to check if element is open or not
-                let el = document.querySelectorAll('.'+ element.getAttribute('data-target-class'));
-                el.forEach(e =>{
-                    console.log('sc',e.scrollHeight)
-                    this.jsutil.addStyle(e,'height',`${e.scrollHeight}px`);
-                    console.log('oh',e.offsetHeight)
-                })
-
-    
-            })
-        }, true);
     }
     /*
      * targetID
@@ -58,7 +43,7 @@ class Collapse{
         if(!document.getElementById(payload.targetID).classList.contains(payload.targetClass)){
             const getHeight = document.getElementById(payload.targetID).scrollHeight;
             console.log(getHeight)
-            this.jsutil.addStyle(document.getElementById(payload.targetID),'height',`${getHeight}px`);
+            this.jsutil.addStyle(document.getElementById(payload.targetID),'height',`auto`);
         }else{
             this.jsutil.addStyle(document.getElementById(payload.targetID),'height','0px');
         }
