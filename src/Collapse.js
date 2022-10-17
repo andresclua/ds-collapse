@@ -11,6 +11,7 @@ class Collapse{
         this.selector.forEach(element => {
             // add event to all of those elements
             element.addEventListener('click', event => {
+                alert('clicko')
                 event.preventDefault(); 
                 var collapseArg = {
                      /*
